@@ -10,4 +10,4 @@ Exam Paper Analysis Project based on NLP
 
 **Details**
 
-Include NLP and Full Stack work
+Include NLP and Full Stack work.
