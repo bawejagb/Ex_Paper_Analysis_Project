@@ -9,3 +9,5 @@ Exam Paper Analysis Project based on NLP
 4. Rohit Singla
 
 **Details**
+
+Include NLP and Full Stack work.
