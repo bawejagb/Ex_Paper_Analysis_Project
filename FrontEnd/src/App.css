@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+main{
+  min-height: 100vh;
+  background: linear-gradient(to right top,#65dfc9,#6cdbeb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glass{
+  background: white;
+  min-height:80vh;
+  width:60%;
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+  border-radius: 2rem;
+  z-index:2;
+  backdrop-filter:blur(2rem);
+  
+}
+.circle1,.circle2{
+  background: white;
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.8),rgba(255,255,255,0.3));
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+
+
+}
+.circle1{
+  top: 5%;
+  right: 10%;
+  
+}
+.circle2{
+  bottom: 5%;
+  left: 10%;
+
+}
