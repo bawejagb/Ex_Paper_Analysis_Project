@@ -5,5 +5,7 @@ Exam Paper Analysis Project based on NLP
 
 1. Gaurav Baweja
 2. Jagrit Nokwal
-3. Arsh Raina Coder
+3. Arsh Raina
 4. Rohit Singla
+
+**Details**
