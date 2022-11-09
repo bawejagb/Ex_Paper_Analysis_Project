@@ -1,5 +1,11 @@
 import React , {useState}from 'react'
+import {useHistory} from 'react-router-dom';
 import styled from "styled-components";
+import SubmitB from './SubmitB';
+//import { BrowserRouter, Routes, Route,Link,NavLink } from "react-router-dom";
+import bookSearch from './bookSearch';
+import questionPapersearch from './questionPapersearch';
+
 
 const Container=styled.div`
 align-items: center;
@@ -14,21 +20,35 @@ font-size:20px;
 
 `;
 function FileUpload(props) {
+  const history=useHistory();
     const [selectedFile,setSelectedFile]=useState();
-    const [isFilePicked,setIsFilePicked]=useState(false);
+    const [selectedFile1,setSelectedFile1]=useState();
 
-    const changeHandler =(e) =>{
+    const [isFilePicked,setIsFilePicked]=useState(false);
+    const [isFilePicked1,setIsFilePicked1]=useState(false);
+    //const navigate=useNavigate();
+
+    const changeHandler1 =(e) =>{
         setSelectedFile(e.target.files[0]);
         setIsFilePicked(true);
     };
-    const handleSubmission=()=>{ 
+    const changeHandler2 =(e) =>{
+      setSelectedFile1(e.target.files[0]);
+      setIsFilePicked1(true);
+  };
+  
+    const handleSubmission=(e)=>{ 
+      if(isFilePicked1){
+        history.push('qp_search');
+      }
 
     };
 
   return (
+    <>
     <Container> 
-        <p>Upload the pdf of the {props.name} </p>
-        <input type="file" name="file" onChange={changeHandler}/>
+        <p>Upload the pdf of the Book </p>
+        <input type="file" name="file" onChange={changeHandler1}/>
         { isFilePicked? (
         <div>
             <p>Filename:{selectedFile.name}</p>
@@ -38,10 +58,51 @@ function FileUpload(props) {
             </div>
         ): (
          <p>Select a file to show</p>
+        
+    
+     
+
         )}
+    <div>
+   
+     </div>
+
+         
     
 
     </Container>
+
+    <Container> 
+        <p>Upload the pdf of the Question Paper </p>
+        <input type="file" name="file" onChange={changeHandler2}/>
+        { isFilePicked1? (
+        <div>
+            <p>Filename:{selectedFile1.name}</p>
+            <p>Filetype:{selectedFile1.type}</p>
+            <p>Size in bytes:{selectedFile1.size}</p>
+          
+            </div>
+        ): (
+         <p>Select a file to show</p>
+        
+    
+     
+
+        )}
+    <div>
+   
+     </div>
+
+         
+    
+
+    </Container>
+    <Container>
+    <button onClick={handleSubmission}>Submit</button>
+</Container>
+
+
+    </>
   )
 }
 
