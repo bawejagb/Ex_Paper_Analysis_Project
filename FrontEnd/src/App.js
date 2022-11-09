@@ -5,7 +5,7 @@ import Card from './components/Card';
 import FileUpload from './components/FileUpload.js';
 import SubmitB from './components/SubmitB';
 import { BrowserRouter, Route } from "react-router-dom";
-import questionPapersearch from './components/questionPapersearch';
+import QuestionPapersearch from './components/questionPapersearch';
 
 function App() {
   return (
@@ -19,8 +19,8 @@ function App() {
          <Card/>
          <FileUpload/>
          </Route>
-         <Route exact path='qp_search'>
-         <questionPapersearch/>
+         <Route exact path='/qp_search'>
+         <QuestionPapersearch/>
          </Route>
          
          
