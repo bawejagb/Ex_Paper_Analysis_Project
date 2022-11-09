@@ -8,8 +8,8 @@ margin-top: 50px;
 `;
 function SubmitB() {
     const handleSubmission=()=>{ 
-     console.log(selectedFile.name);
-
+     //console.log(selectedFile.name);
+    
     };
 
   return (
