@@ -14,7 +14,8 @@ margin-left:50px;
 margin-right:50px;
 font-family: 'Kalam', cursive;
 `;
-const questionPapersearch = () => {
+const questionPapersearch = (dataProp) => {
+  console.log("Paper Page: ",dataProp);
   return (
     <Container>Welcome to Ex-paper analysis. One stop place to get free from all exam related wories. Analyse all your previous year question papers with our application and get to know what questions are being asked frequently, questions from which topic are being asked. Also get the solution to a particular question in the question paper uploaded by you.
   <br/>
