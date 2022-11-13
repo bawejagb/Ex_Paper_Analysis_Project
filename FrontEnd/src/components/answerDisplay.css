@@ -1,0 +1,31 @@
+
+  @media only screen and (max-width: 800px) { 
+  table {
+    border: 0px solid white;
+    width: 100%;
+    height: auto;
+  
+
+  }
+}
+  tr{
+    border-bottom: 1px solid black;
+  }
+    
+  th {
+    border-bottom: 1px solid black;
+  }
+    
+  td {
+    
+    overflow: hidden;
+    size:500px;
+
+    
+
+  }
+  .quest{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+  }

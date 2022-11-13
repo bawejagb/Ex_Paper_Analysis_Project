@@ -5,7 +5,7 @@ import Card from "./components/Card";
 import FileUpload from "./components/FileUpload.js";
 import SubmitB from "./components/SubmitB";
 import { BrowserRouter, Route } from "react-router-dom";
-import QuestionPapersearch from "./components/questionPapersearch";
+import AnswerDisplay from "./components/answerDisplay";
 import { useState } from "react";
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
             <Card />
             <FileUpload setDataProp={setDataProp} />
           </Route>
-          <Route exact path="/qp_search">
-            <QuestionPapersearch dataProp={dataProp}/>
+          <Route exact path="/display">
+            <AnswerDisplay dataProp={dataProp}/>
           </Route>
         </section>
         <div className="circle1"></div>
