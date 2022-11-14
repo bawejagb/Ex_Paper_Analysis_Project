@@ -73,7 +73,9 @@ const answerDisplay = () => {
     'ans2': 'a2',
     'ans3': 'a3'
   }]
+  var i=0;
   return (
+  
    <>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -86,16 +88,18 @@ const answerDisplay = () => {
           </TableRow>
         </TableHead>
         <TableBody>
+          
           {info.map((row) => (
             <TableRow
               key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell align="left">{row.q1}</TableCell>
+              <TableCell align="left">Q{i++}{row.q1}</TableCell>
               <TableCell align="right"><a href={row.ans1} target="_blank" > Link1</a></TableCell>
               <TableCell align="right"><a href={row.ans2} target="_blank" > Link2</a></TableCell>
               <TableCell align="right"><a href={row.ans3} target="_blank" > Link3</a></TableCell>
             </TableRow>
+            
           ))}
         </TableBody>
       </Table>

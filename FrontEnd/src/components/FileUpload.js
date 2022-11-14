@@ -6,7 +6,7 @@ import SubmitB from "./SubmitB";
 import bookSearch from "./bookSearch";
 import questionPapersearch from "./questionPapersearch";
 import Axios from "axios";
-
+Axios.defaults.timeout = 50000
 const Container = styled.div`
   align-items: center;
   justify-content: center;
@@ -42,10 +42,11 @@ function FileUpload(setDataProp) {
       formdata.append("file", selectedPaperFile);
       formdata.append("name", selectedPaperFile.name);
       Axios({
-        url: "http://localhost:3000/upload",
+        url: "https://f09e-124-253-6-31.ngrok.io/uploadpaper",
         method: "POST",
         headers: {
-          "Access-Control-Allow-Origin": "*",
+          'Content-Type': 'application/x-www-form-urlencoded',
+          accept: "application/json",
         },
         data: formdata,
       }).then(
@@ -57,7 +58,13 @@ function FileUpload(setDataProp) {
           console.log(err);
         }
       );
-      history.push('qp_search');
+      // fetch("https://f09e-124-253-6-31.ngrok.io/uploadpaper",{
+      //   method: "POST",
+      //   body:formdata
+      // }).then((res)=>{
+      //   console.log(res);
+      // })
+      history.push('display');
     }
   };
 
