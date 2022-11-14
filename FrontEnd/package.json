@@ -13,6 +13,7 @@
     "context": "^3.0.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-loader-spinner": "^5.3.4",
     "react-scripts": "5.0.1",
     "react-table": "^7.8.0",
     "styled-components": "^5.3.6",

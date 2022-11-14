@@ -6,7 +6,6 @@ import SubmitB from "./SubmitB";
 import bookSearch from "./bookSearch";
 import questionPapersearch from "./questionPapersearch";
 import Axios from "axios";
-Axios.defaults.timeout = 50000
 const Container = styled.div`
   align-items: center;
   justify-content: center;
@@ -16,7 +15,7 @@ const Container = styled.div`
   font-family: "Kalam", cursive;
   font-size: 20px;
 `;
-function FileUpload(setDataProp) {
+function FileUpload({setDataProp}) {
   const history = useHistory();
   const [selectedBookFile, setSelectedBookFile] = useState();
   const [selectedPaperFile, setSelectedPaperFile] = useState();
@@ -32,6 +31,7 @@ function FileUpload(setDataProp) {
   const changeHandler2 = (e) => {
     setSelectedPaperFile(e.target.files[0]);
     setIsFilePicked1(true);
+    setDataProp(undefined);
   };
 
   const handleSubmission = (e) => {
@@ -39,25 +39,20 @@ function FileUpload(setDataProp) {
       console.log(selectedPaperFile);
       console.log(selectedPaperFile.name);
       let formdata = new FormData();
-      formdata.append("file", selectedPaperFile);
-      formdata.append("name", selectedPaperFile.name);
-      Axios({
-        url: "https://f09e-124-253-6-31.ngrok.io/uploadpaper",
-        method: "POST",
+      formdata.append("file", selectedPaperFile,{
+        contentType: "application/pdf",
+      });
+      Axios.post("https://da1c-27-255-222-25.ngrok.io/uploadpaper",formdata,{
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          accept: "application/json",
+          'Content-Type': "application/pdf"
         },
-        data: formdata,
       }).then(
         (res) => {
           console.log(res.data);
           setDataProp(res.data);
-        },
-        (err) => {
+        }).catch((err) => {
           console.log(err);
-        }
-      );
+        });
       // fetch("https://f09e-124-253-6-31.ngrok.io/uploadpaper",{
       //   method: "POST",
       //   body:formdata

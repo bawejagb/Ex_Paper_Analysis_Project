@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import data from './sample_data.json';
+// import data from './sample_data.json';
 import styled from 'styled-components';
 import { TableContainer, Table, TableHead, TableBody, TableRow, TableCell, Paper } from '@mui/material';
 import ReactTable from "react-table";
@@ -8,36 +8,51 @@ import BasicTable from './Table';
 import {Link} from 'react-router-dom'/*const Table=styled.table`
  border:2px solid black;
 `;*/
-
+import { Circles } from 'react-loader-spinner';
 
 //import JSON from 'JSON';
+
+
+//console.log(info);
+
+
+
+//console.log(questions);
+//console.log(answers);
+
+const Arsh=styled.div`
+    align-items:center;
+    margin-left:45%;
+    margin-top:30%;
+
+
+`
+
+const answerDisplay = ({dataProp}) => {
+  console.log(dataProp);
+  if(dataProp==undefined){
+    return (
+      <Arsh>
+      
+        <Circles
+          height="120"
+          width="120"
+          radius="12"
+          color="green"
+          ariaLabel="loading"
+          wrapperStyle
+          wrapperClass
+        />
+      </Arsh>
+    )
+  }
 var questions = [];
 var answers = [];
-//console.log(data)
-//const text=JSON.parse(data);
-//console.log(data['289bcdb1-7-1'].ans_arr);
+var data = dataProp;
 for (let k in data) {
   // console.log(k);
   questions = data[k].q_arr;
   answers = data[k].ans_arr;
-  //for(let j in k){
-  // console.log(j);
-
-  /*if(k==='rois')
-  continue;
-  else if(k==='q_arr'){
-  for(let j in k){
-      questions.push(j);
-  }
-
-  }
-
- else if(k==='ans_arr'){
- // answers.push(k[j]);
- for(let j in k){
-  answers.push(j);
-}
-}*/
 }
 let info = [];
 let n = questions.length;
@@ -49,17 +64,6 @@ for (let i = 0; i < n; i++) {
     'ans3': answers[i][2]
   };
 }
-
-//console.log(info);
-
-
-
-//console.log(questions);
-//console.log(answers);
-
-
-
-const answerDisplay = () => {
   const dummy = [{
     'id': 0,
     'q1': 'q1',
