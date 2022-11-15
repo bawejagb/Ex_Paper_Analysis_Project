@@ -7,6 +7,7 @@ import SubmitB from "./components/SubmitB";
 import { BrowserRouter, Route } from "react-router-dom";
 import AnswerDisplay from "./components/answerDisplay";
 import { useState } from "react";
+import Footer from "./components/footer";
 
 function App() {
   const [dataProp, setDataProp] = useState();
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/">
             <Card />
             <FileUpload setDataProp={setDataProp} />
+           <Footer/>
           </Route>
           <Route exact path="/display">
             <AnswerDisplay dataProp={dataProp}/>

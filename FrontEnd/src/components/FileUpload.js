@@ -9,11 +9,19 @@ import Axios from "axios";
 const Container = styled.div`
   align-items: center;
   justify-content: center;
-  margin-left: 250px;
-  margin-right: 100px;
-  margin-top: 50px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top:  50px;
   font-family: "Kalam", cursive;
   font-size: 20px;
+  border: 4px solid black;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+
+  
+
 `;
 function FileUpload({setDataProp}) {
   const history = useHistory();
@@ -42,7 +50,7 @@ function FileUpload({setDataProp}) {
       formdata.append("file", selectedPaperFile,{
         contentType: "application/pdf",
       });
-      Axios.post("https://da1c-27-255-222-25.ngrok.io/uploadpaper",formdata,{
+      Axios.post("https://cc70-124-253-108-202.ngrok.io/uploadpaper",formdata,{
         headers: {
           'Content-Type': "application/pdf"
         },
@@ -65,26 +73,7 @@ function FileUpload({setDataProp}) {
 
   return (
     <>
-      <Container>
-        <p>Upload the pdf of the Book </p>
-        <input
-          type="file"
-          name="file"
-          onChange={changeHandler1}
-          accept="application/pdf"
-        />
-        {isFilePicked ? (
-          <div>
-            <p>Filename:{selectedBookFile.name}</p>
-            <p>Filetype:{selectedBookFile.type}</p>
-            <p>Size in bytes:{selectedBookFile.size}</p>
-          </div>
-        ) : (
-          <p>Select a file to show</p>
-        )}
-        <div></div>
-      </Container>
-
+      
       <Container>
         <p>Upload the pdf of the Question Paper </p>
         <input
@@ -102,11 +91,14 @@ function FileUpload({setDataProp}) {
         ) : (
           <p>Select a file to show</p>
         )}
-        <div></div>
-      </Container>
-      <Container>
+        <br/>
+        <br/>
+        <br/>
+
         <button onClick={handleSubmission}>Submit</button>
+
       </Container>
+    
     </>
   );
 }
