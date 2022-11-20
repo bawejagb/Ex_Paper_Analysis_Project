@@ -1,5 +1,5 @@
 # Ex_Paper_Analysis_Project
-Exam Paper Analysis Project based on NLP
+Exam Paper Analysis Project based on NLP and RCNN.
 
 **Collaborators**
 
