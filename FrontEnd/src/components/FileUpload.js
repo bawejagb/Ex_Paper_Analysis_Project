@@ -6,6 +6,7 @@ import SubmitB from "./SubmitB";
 import bookSearch from "./bookSearch";
 import questionPapersearch from "./questionPapersearch";
 import Axios from "axios";
+import multipaperrequest from "./axiosrequest";
 const Container = styled.div`
   align-items: center;
   justify-content: center;
@@ -37,7 +38,7 @@ function FileUpload({setDataProp}) {
     setIsFilePicked(true);
   };
   const changeHandler2 = (e) => {
-    setSelectedPaperFile(e.target.files[0]);
+    setSelectedPaperFile(Array.prototype.slice.call(e.target.files));
     setIsFilePicked1(true);
     setDataProp(undefined);
   };
@@ -46,21 +47,23 @@ function FileUpload({setDataProp}) {
     if (isFilePicked1) {
       console.log(selectedPaperFile);
       console.log(selectedPaperFile.name);
-      let formdata = new FormData();
-      formdata.append("file", selectedPaperFile,{
-        contentType: "application/pdf",
-      });
-      Axios.post("https://cc70-124-253-108-202.ngrok.io/uploadpaper",formdata,{
-        headers: {
-          'Content-Type': "application/pdf"
-        },
-      }).then(
-        (res) => {
-          console.log(res.data);
-          setDataProp(res.data);
-        }).catch((err) => {
-          console.log(err);
-        });
+      
+      multipaperrequest(selectedPaperFile);
+      // let formdata = new FormData();
+      // formdata.append("file", selectedPaperFile,{
+      //   contentType: "application/pdf",
+      // });
+      // Axios.post("https://cc70-124-253-108-202.ngrok.io/uploadpaper",formdata,{
+      //   headers: {
+      //     'Content-Type': "application/pdf"
+      //   },
+      // }).then(
+      //   (res) => {
+      //     console.log(res.data);
+      //     setDataProp(res.data);
+      //   }).catch((err) => {
+      //     console.log(err);
+      //   });
       // fetch("https://f09e-124-253-6-31.ngrok.io/uploadpaper",{
       //   method: "POST",
       //   body:formdata
@@ -81,12 +84,13 @@ function FileUpload({setDataProp}) {
           name="file"
           onChange={changeHandler2}
           accept="application/pdf"
+          multiple
         />
         {isFilePicked1 ? (
           <div>
-            <p>Filename:{selectedPaperFile.name}</p>
+            {/* <p>Filename:{selectedPaperFile.name}</p>
             <p>Filetype:{selectedPaperFile.type}</p>
-            <p>Size in bytes:{selectedPaperFile.size}</p>
+            <p>Size in bytes:{selectedPaperFile.size}</p> */}
           </div>
         ) : (
           <p>Select a file to show</p>

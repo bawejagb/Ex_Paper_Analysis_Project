@@ -29,3 +29,12 @@
     text-overflow: ellipsis;
     
   }
+  .table-head{
+    display: flex;
+    justify-content: center;
+  }
+  .custome-navbar{
+      position: fixed;
+      right: 0;
+      left: 0;
+  }

@@ -30,7 +30,7 @@ const Arsh=styled.div`
 
 const answerDisplay = ({dataProp}) => {
   console.log(dataProp);
-  if(dataProp==undefined){
+  /*if(dataProp===undefined){
     return (
       <Arsh>
       
@@ -46,7 +46,8 @@ const answerDisplay = ({dataProp}) => {
       </Arsh>
     )
   }
-var questions = [];
+  //var data =dataProp;
+/*var questions = [];
 var answers = [];
 var data = dataProp;
 for (let k in data) {
@@ -78,13 +79,50 @@ for (let i = 0; i < n; i++) {
     'ans3': 'a3'
   }]
   var i=0;
+  */
+ const data={
+  prop1: [['Q1','Who is ms dhoni','L1','L2','L3'],['Q2','Who is Jagrit bareja','L1','L2','L3'],['Q3','Who is gaurav bareja','L1','L2','L3']],
+  prop2:[['gk','q1 q4 q5 q6'],['science','q2'],['geography','q3']]
+ };
+ console.log(data);
+ let info=[];
+ let info2=[];
+ //var i=0;
+ var table1=data.prop1;
+ var table2=data.prop2;
+ let len_table1=table1.length;
+ let len_table2=table2.length;
+
+ for(let i=0;i<len_table1;i++){
+  info[i]={
+    'q_no':table1[i][0],
+    'q':table1[i][1],
+    'ans1':table1[i][2],
+    'ans2':table1[i][3],
+    'ans3':table1[i][4]
+  };
+ // i++;
+ }
+ console.log(info);
+ for(let i=0;i<len_table2;i++){
+  info2[i]={
+    'topic':table2[i][0],
+    'ques':table2[i][1]
+  };
+ // i++;
+ }
+ console.log(info2);
+
+
   return (
   
    <>
+    <h3 className="table-head">Question Reference Link</h3>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
+          <TableCell align="left">Question_No</TableCell>
             <TableCell align="left">Question</TableCell>
             <TableCell align="right">Ans Link 1</TableCell>
             <TableCell align="right">Ans Link 2</TableCell>
@@ -98,10 +136,40 @@ for (let i = 0; i < n; i++) {
               key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell align="left">Q{i++}{row.q1}</TableCell>
+              <TableCell align="left">{row.q_no}</TableCell>
+              <TableCell align="left">{row.q}</TableCell>
               <TableCell align="right"><a href={row.ans1} target="_blank" > Link1</a></TableCell>
               <TableCell align="right"><a href={row.ans2} target="_blank" > Link2</a></TableCell>
               <TableCell align="right"><a href={row.ans3} target="_blank" > Link3</a></TableCell>
+            </TableRow>
+            
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+    <br/>
+    <br/>
+
+    <h3 className="table-head">Important Topics</h3>
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+          <TableCell align="left">Topic</TableCell>
+            <TableCell align="left">Questions asked</TableCell>
+           
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          
+          {info2.map((row) => (
+            <TableRow
+              key={row.name}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell align="left">{row.topic}</TableCell>
+              <TableCell align="left">{row.ques}</TableCell>
+              
             </TableRow>
             
           ))}
