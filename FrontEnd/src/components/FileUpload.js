@@ -28,6 +28,7 @@ function FileUpload({setDataProp}) {
   const history = useHistory();
   const [selectedBookFile, setSelectedBookFile] = useState();
   const [selectedPaperFile, setSelectedPaperFile] = useState();
+  const [propdata,setpropdata]= useState();
 
   const [isFilePicked, setIsFilePicked] = useState(false);
   const [isFilePicked1, setIsFilePicked1] = useState(false);
@@ -48,7 +49,7 @@ function FileUpload({setDataProp}) {
       console.log(selectedPaperFile);
       console.log(selectedPaperFile.name);
       
-      multipaperrequest(selectedPaperFile);
+      multipaperrequest(selectedPaperFile,setDataProp);
       // let formdata = new FormData();
       // formdata.append("file", selectedPaperFile,{
       //   contentType: "application/pdf",

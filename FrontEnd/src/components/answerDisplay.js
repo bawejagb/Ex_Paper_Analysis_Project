@@ -30,7 +30,9 @@ const Arsh=styled.div`
 
 const answerDisplay = ({dataProp}) => {
   console.log(dataProp);
-  /*if(dataProp===undefined){
+  console.log(dataProp);
+  console.log(dataProp);
+  if(dataProp===undefined){
     return (
       <Arsh>
       
@@ -80,16 +82,17 @@ for (let i = 0; i < n; i++) {
   }]
   var i=0;
   */
- const data={
+ /*const data={
   prop1: [['Q1','Who is ms dhoni','L1','L2','L3'],['Q2','Who is Jagrit bareja','L1','L2','L3'],['Q3','Who is gaurav bareja','L1','L2','L3']],
   prop2:[['gk','q1 q4 q5 q6'],['science','q2'],['geography','q3']]
- };
- console.log(data);
+ };*/
+ var data=dataProp;
+ //console.log(data);
  let info=[];
  let info2=[];
  //var i=0;
- var table1=data.prop1;
- var table2=data.prop2;
+ var table1=data.links;
+ var table2=data.topics;
  let len_table1=table1.length;
  let len_table2=table2.length;
 
