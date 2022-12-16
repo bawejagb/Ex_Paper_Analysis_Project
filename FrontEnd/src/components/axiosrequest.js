@@ -12,7 +12,7 @@ const  multipaperrequest=(files,setDataProp)=>{
 
 var config = {
   method: 'post',
-  url: 'https://efb7-2409-4055-1b-bd52-c64-1657-9bb7-84f3.ngrok.io/multiplepapertopics',
+  url: 'http://127.0.0.1:8000/multiplepapertopics',
   headers: { 
     'accept': 'application/json', 
     'Content-Type': 'multipart/form-data',
