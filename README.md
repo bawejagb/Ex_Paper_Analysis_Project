@@ -58,7 +58,7 @@ You will have to install some libraries. `Run:`
 
 # Resource Files
 
-![Drive Link](https://drive.google.com/drive/folders/1HBACkzHMe1FwZwqNN1DK39QNSabKAjrn?usp=share_link)
+[Drive Link](https://drive.google.com/drive/folders/1HBACkzHMe1FwZwqNN1DK39QNSabKAjrn?usp=share_link)
 # Running the program
 
 **Backend**- Run command on terminal: uvicorn Final_Server_Project:app --reload
