@@ -56,6 +56,9 @@ You will have to install some libraries. `Run:`
 5. `pip install pdf2image`
 5. `pip install cv2`
 
+# Resource Files
+
+![Drive Link](https://drive.google.com/drive/folders/1HBACkzHMe1FwZwqNN1DK39QNSabKAjrn?usp=share_link)
 # Running the program
 
 **Backend**- Run command on terminal: uvicorn Final_Server_Project:app --reload
