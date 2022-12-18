@@ -46,8 +46,8 @@ function FileUpload({setDataProp}) {
 
   const handleSubmission = (e) => {
     if (isFilePicked1) {
-      console.log(selectedPaperFile);
-      console.log(selectedPaperFile.name);
+      // console.log(selectedPaperFile);
+      // console.log(selectedPaperFile.name);
       
       multipaperrequest(selectedPaperFile,setDataProp);
       // let formdata = new FormData();

@@ -8,7 +8,7 @@ const  multipaperrequest=(files,setDataProp)=>{
             contentType: "application/pdf",
         });
     }
-    console.log(...data);
+    // console.log(...data);
 
 var config = {
   method: 'post',
@@ -24,7 +24,7 @@ axios(config)
 .then(function (response) {
    //result=response.data;
    setDataProp(response.data);
-  console.log(JSON.stringify(response.data));
+  // console.log(JSON.stringify(response.data));
 })
 .catch(function (error) {
   console.log("error at axios request ,"+error);

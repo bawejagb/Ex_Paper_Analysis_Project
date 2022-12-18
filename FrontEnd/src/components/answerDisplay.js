@@ -11,12 +11,7 @@ import {Link} from 'react-router-dom'/*const Table=styled.table`
 import { Circles } from 'react-loader-spinner';
 
 //import JSON from 'JSON';
-
-
 //console.log(info);
-
-
-
 //console.log(questions);
 //console.log(answers);
 
@@ -29,9 +24,9 @@ const Arsh=styled.div`
 `
 
 const answerDisplay = ({dataProp}) => {
-  console.log(dataProp);
-  console.log(dataProp);
-  console.log(dataProp);
+  // console.log(dataProp);
+  // console.log(dataProp);
+  // console.log(dataProp);
   if(dataProp===undefined){
     return (
       <Arsh>
@@ -106,7 +101,7 @@ for (let i = 0; i < n; i++) {
   };
  // i++;
  }
- console.log(info);
+//  console.log(info);
  for(let i=0;i<len_table2;i++){
   info2[i]={
     'topic':table2[i][0],
@@ -114,7 +109,7 @@ for (let i = 0; i < n; i++) {
   };
  // i++;
  }
- console.log(info2);
+//  console.log(info2);
 
 
   return (
@@ -125,11 +120,11 @@ for (let i = 0; i < n; i++) {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-          <TableCell align="left">Question_No</TableCell>
-            <TableCell align="left">Question</TableCell>
-            <TableCell align="right">Ans Link 1</TableCell>
-            <TableCell align="right">Ans Link 2</TableCell>
-            <TableCell align="right">Ans Link 3</TableCell>
+          <TableCell class="Bold" align="left">Qn. No.</TableCell>
+            <TableCell class="Bold" align="left">Question</TableCell>
+            <TableCell class="Bold" align="right">Ans. Link 1</TableCell>
+            <TableCell class="Bold" align="right">Ans. Link 2</TableCell>
+            <TableCell class="Bold" align="right">Ans. Link 3</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -158,8 +153,8 @@ for (let i = 0; i < n; i++) {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-          <TableCell align="left">Topic</TableCell>
-            <TableCell align="left">Questions asked</TableCell>
+          <TableCell class="Bold" align="left">Topic</TableCell>
+            <TableCell class="Bold" align="left">Questions Asked</TableCell>
            
           </TableRow>
         </TableHead>

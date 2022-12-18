@@ -38,3 +38,5 @@
       right: 0;
       left: 0;
   }
+  .Bold { text-align: center;
+    font-weight: bold; }
