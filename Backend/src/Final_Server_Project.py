@@ -111,11 +111,6 @@ def final_result_from_nparray(imgtry):
     print("extracting text for images on one page")
     return extract_questions_image(rois,imgtry,factor)
 
-def get_output():
-    with open('output_data.txt') as f:
-        data = f.read()
-    data =ast.literal_eval(data)
-    return data
 
 app = FastAPI()
 
