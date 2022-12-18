@@ -50,9 +50,11 @@ You will have to install some libraries. `Run:`
 5. `pip install pdf2image`
 5. `pip install cv2`
 
-**Running the program**
-Backend- Run command on terminal: uvicorn Final_Server_Project:app --reload
-Frontend- Run command on terminal: npm start
+# Running the program
+
+**Backend**- Run command on terminal: uvicorn Final_Server_Project:app --reload
+
+**Frontend**- Run command on terminal: npm start
 # Collaborators
 
 1. Gaurav Baweja
