@@ -1,6 +1,12 @@
 # Ex_Paper_Analysis_Project
 Exam Paper Analysis is a tool for the students to analyze previous exam paper to extract important topics and answers links for each question.
 
+<br>
+
+<img align="right" src='https://github.com/Aanvikshiki/Ex_Paper_Analysis_Project
+/blob/main/resources/project_demo.gif' align='center' width='50%'>
+
+<br>
 # Methodology
 1. User run the program on localhost.
 2. When the user lands onto the landing page he will be asked to upload question papers.
