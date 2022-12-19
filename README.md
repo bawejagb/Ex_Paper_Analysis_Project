@@ -7,6 +7,19 @@ Exam Paper Analysis is a tool for the students to analyze previous exam paper to
 
 <br>
 
+# Collaborators
+
+**CPG No**: 109
+
+**Mentor**: Dr. Shivani Sharma
+
+**Team Members**:
+
+1. Gaurav Baweja
+2. Jagrit Nokwal
+3. Arsh Raina
+4. Rohit Singla
+
 # Methodology
 1. User run the program on localhost.
 2. When the user lands onto the landing page he will be asked to upload question papers.
@@ -64,10 +77,5 @@ You will have to install some libraries. `Run:`
 **Backend**- Run command on terminal: uvicorn Final_Server_Project:app --reload
 
 **Frontend**- Run command on terminal: npm start
-# Collaborators
 
-1. Gaurav Baweja
-2. Jagrit Nokwal
-3. Arsh Raina
-4. Rohit Singla
 
