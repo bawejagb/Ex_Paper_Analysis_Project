@@ -49,26 +49,6 @@ that we can crop the accurate images of our questions.
 12. After getting the image of each question we used a tool called OCR (Optical Character Recognition) which
 takes these images as an input and convert them into text format by the help of “easyocr” library.
 
-# To run this
-You will have to install some libraries. `Run:`
-1. `pip install tensorflow`
-2. `pip install numpy`
-3. `pip install matplotlib`
-4. `pip install scikit-image`
-5. `pip install keras`
-5. `pip install opencv-python`
-5. `pip install h5py`
-5. `pip install pycocotools`
-5. `pip install easyocr`
-5. `pip install fastapi`
-5. `pip install threading`
-5. `pip install nltk`
-5. `pip install operator`
-5. `pip install ecommercetools`
-5. `pip install PIL`
-5. `pip install pdf2image`
-5. `pip install cv2`
-
 # Resource Files
 
 [Drive Link](https://drive.google.com/drive/folders/1HBACkzHMe1FwZwqNN1DK39QNSabKAjrn?usp=share_link)

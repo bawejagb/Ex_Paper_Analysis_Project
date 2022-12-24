@@ -1,0 +1,17 @@
+tensorflow
+matplotlib
+scikit-image
+opencv-python
+pycocotools
+easyocr
+fastapi
+nltk
+ecommercetools
+ pdf2image
+uvicorn
+IPython
+python-multipart
+pdf-info
+cython
+imgaug
+operator-courior
